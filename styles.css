@@ -1,0 +1,12 @@
+div{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    background-color: salmon;
+}
+#tschika{
+    transition: transform 3s;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50px;
+}
