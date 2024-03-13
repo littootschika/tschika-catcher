@@ -1,3 +1,9 @@
+body{
+    cursor: url('docs/assets/can\ of\ coke.png');
+}
+.shopMenuContainer, .shopMenuContent{
+    display: none;
+}
 main{
     border: 5px solid black;
     height: 40em;
@@ -19,12 +25,12 @@ main{
     cursor: url('docs/assets/can\ of\ coke.png');
 }
 .tschika{
-    transition: transform 0.4s;
+    transition: transform 0.6s;
     height: 7em;
     padding: 10px;
     border-radius: 50px;
-    border: 1px solid black;
-    display: block;
+    border: 1px double yellow;
+    position: block;
 }
 #stats{
     margin: 0px;
