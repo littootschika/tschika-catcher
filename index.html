@@ -6,13 +6,20 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="docs/assets/tschika 16by16 icon.png" type="image/x-icon">
 </head>
-<body onload="newTschika()">
+<body onload="rngTschikaSpawn()">
 <main>
 <div id="container">
 </div>
-<div id="stats">
+<section id="stats">
 <p id="caughtTschikaCounter"><em>Caught tschikas: </em><strong>0</strong></p>
+<p id="levelCount"></p>
+</section>
+<section id="shop">
+<button onclick="activateShopMenu()">shop</button>
+<div class="shopMenuContainer">
+<h1 class="shopMenuContent">the shop</h1> 
 </div>
+</section>
 </main>
 </body>
 </html>
