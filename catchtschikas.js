@@ -1,49 +1,47 @@
 let timesRolled = 0;
 let tschikasCaught = 0;
 let tschikasSpawned = 0;
-
 //spawning tschikas by rng
 function rngTschikaSpawn() {
-    rngDecider = Math.floor((Math.random()*15000)+1);
-    setInterval(newTschika, rngDecider);
+    rngDecider = Math.random()*25000;
+    if (tschikasSpawned < 6){
+        setInterval(newTschika, rngDecider);
+    }
+    else {
+        rngDecider = 0;
+    }
 }
-function newTschika() {
-    //variables
-    tschikasSpawned++
-    //attributes
+//making the tschika
+function newTschika(left, top) {
+    tschikasSpawned++;
     const createdTschika = document.createElement('img');
     createdTschika.setAttribute('class', 'tschika');
-    createdTschika.setAttribute('id', `tschika${tschikasSpawned}`);
     createdTschika.setAttribute('draggable', 'false');
     document.querySelector('#container').appendChild(createdTschika);
-    //event listeners
-    createdTschika.addEventListener('mouseenter', rollAway);
-    createdTschika.addEventListener('click', catchedTarget);
-    //src of the tschikas- i did it, just like i promised. I definitely don't preak promises, do I? (not true)
-    const TschikaImages = [,
-    "docs/assets/tschika who sings the wheels on the bus.png",
+    createdTschika.addEventListener('mouseenter', function(){
+        timesRolled++;
+        let randomYCoordinate = Math.random()*5;
+        let randomXCoordinate = Math.random()*timesRolled;
+        this.style.transform = `scale(1.3) translate(${randomXCoordinate*3}em, ${randomYCoordinate*8}em) rotate(-${timesRolled*810000}deg)`;});
+        createdTschika.addEventListener('click', function(){
+            tschikasCaught++;
+            tschikasSpawned--
+            document.querySelector('strong').innerHTML = tschikasCaught;
+            this.remove();
+        timesRolled = 0;
+    this.style.left = randomXCoordinate^2 + 'em';
+    this.style.top = randomYCoordinate^2 + 'em';
+    });
+    const TschikaImages = ["docs/assets/tschika who sings the wheels on the bus.png",
     "docs/assets/tschika who throws the chips.png",
-    "docs/assets/tschika who fetches the chips.png",];
-    const randomTschikaImgDecider = (Math.floor(Math.random()*TschikaImages.length)+3);
+    "docs/assets/tschika who fetches the chips.png"];
+    const randomTschikaImgDecider = (Math.floor(Math.random()*TschikaImages.length));
     let selectedTschikaImg = TschikaImages[randomTschikaImgDecider];
     createdTschika.src = selectedTschikaImg;
-    //event listeners
 }
-//make it so that if the tschika is within a certain distance of the border, it goes right
-function rollAway(){
-    timesRolled++;
-    let randomYCoordinate = Math.random()*10;
-    let randomXCoordinate = Math.random()*timesRolled;
-    let tschikaThing = document.getElementById(`tschika${tschikasSpawned}`);
-    tschikaThing.style.transform = `scale(1.3) translate(${randomXCoordinate*8}em, ${randomYCoordinate*8}em) rotate(-${timesRolled*81000}deg)`;
+function activateShopMenu(){
+    document.getElementsByClassName('shopMenuContainer').style.display = "block";
+    document.getElementsByClassName('shopMenuContent').style.display = "block";
 }
-function catchedTarget() {
-    tschikasCaught++;
-    document.querySelector('strong').innerHTML = tschikasCaught;
-    document.getElementById(`tschika${tschikasSpawned}`).remove();
-    tschikasSpawned--;
-    timesRolled = 0;
-    }
-//hey rememeber that bug where the createdTschikas made the actual tschika roll? Yeah, make that into a boss, the
-//ILLUSION TSCHIKA, where that happens. When you hover over 1 chicken, they all move, and when you click on them,
-//they all disapear and leave the actual illusion tschika there for 0.2seconds and then summon some more tschikas
+//ILLUSION TSCHIKA. When you hover over 1 chicken, they move, and when you click on them, they disapear and leave the actual illusion tschika there for 0.2seconds and then summon some more tschikas
+//ALSO, REMEMBER LITTOO DRIPPA!
