@@ -2,6 +2,12 @@ let timesRolled = 0;
 let tschikasCaught = 0;
 let tschikasSpawned = 0;
 //spawning tschikas by rng
+function stuffThatNeedsToHappenWhenTheBodyLoads(){
+    rngTschikaSpawn();
+    document.body.addEventListener('touchend', function(){
+        window.close();
+    });
+}
 function rngTschikaSpawn() {
     rngDecider = Math.random()*25000;
     if (tschikasSpawned < 6){
@@ -25,7 +31,7 @@ function newTschika(left, top) {
         this.style.transform = `scale(1.3) translate(${randomXCoordinate*3}em, ${randomYCoordinate*8}em) rotate(-${timesRolled*810000}deg)`;});
         createdTschika.addEventListener('click', function(){
             tschikasCaught++;
-            tschikasSpawned--
+            tschikasSpawned--;
             document.querySelector('strong').innerHTML = tschikasCaught;
             this.remove();
         timesRolled = 0;
