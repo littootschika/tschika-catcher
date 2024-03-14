@@ -1,7 +1,6 @@
 let timesRolled = 0;
 let tschikasCaught = 0;
 let tschikasSpawned = 0;
-//spawning tschikas by rng
 function stuffThatNeedsToHappenWhenTheBodyLoads(){
     rngTschikaSpawn();
     document.body.addEventListener('touchend', function(){
@@ -17,7 +16,6 @@ function rngTschikaSpawn() {
         rngDecider = 0;
     }
 }
-//making the tschika
 function newTschika(left, top) {
     tschikasSpawned++;
     const createdTschika = document.createElement('img');
@@ -49,5 +47,3 @@ function activateShopMenu(){
     document.getElementsByClassName('shopMenuContainer').style.display = "block";
     document.getElementsByClassName('shopMenuContent').style.display = "block";
 }
-//ILLUSION TSCHIKA. When you hover over 1 chicken, they move, and when you click on them, they disapear and leave the actual illusion tschika there for 0.2seconds and then summon some more tschikas
-//ALSO, REMEMBER LITTOO DRIPPA!
