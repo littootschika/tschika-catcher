@@ -1,8 +1,13 @@
 let timesRolled = 0;
 let tschikasCaught = 0;
 let tschikasSpawned = 0;
+//let bitchesWhoeverIsReadingThisHas = 0;
 function stuffThatNeedsToHappenWhenTheBodyLoads(){
     rngTschikaSpawn();
+    cantTouchMe_DUN_DUN_DA_DA__DA_DA_DA_DA();
+}
+//hammer and the frog reference to stop people from cheating
+function cantTouchMe_DUN_DUN_DA_DA__DA_DA_DA_DA() {
     window.location.replace(window.location.href);
     document.body.addEventListener('touchend', function(){
         window.close();
