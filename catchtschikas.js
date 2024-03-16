@@ -3,6 +3,7 @@ let tschikasCaught = 0;
 let tschikasSpawned = 0;
 function stuffThatNeedsToHappenWhenTheBodyLoads(){
     rngTschikaSpawn();
+    window.location.replace(windown.location.href);
     document.body.addEventListener('touchend', function(){
         window.close();
     });
