@@ -93,6 +93,7 @@ function cantTouchMe_DUN_DUN_DA_DA__DA_DA_DA_DA() {
     if (lalalala == 10001){
         alert('cool. now you get 2 gold stars');
     }
+}
 function activateShopMenu(){
     document.getElementsByClassName('shopMenuContainer').style.display = "block";
     document.getElementsByClassName('shopMenuContent').style.display = "block";
