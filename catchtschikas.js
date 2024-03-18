@@ -64,7 +64,8 @@ function cantTouchMe_DUN_DUN_DA_DA__DA_DA_DA_DA() {
     }
     if (lalalala == 6){
         alert('alright, I see that you\'re too stupid to reason with. The code actually stops workling if you click the container more than 100 times, because I can\'t be bothered adding more 0\'s.\nSo click the container 100 times, and any clicks after that will give u more tschikas.\n Why would I say something like this to you? Well, this has captured ur attention then, and I assume most people don\'t even try this out and lie to me, saying it\'s good. I\'m shit at doing this compared to people who work at google.\nMore clicks == more time u spent on website. So keep clicking. Click 1000, and get 900 tschikas.');
-        alert('after an absurd amount of touches on the container, touch the tschika')
+        alert('after an absurd amount of touches on the container, touch the tschika');
+        alert('oh, wait a minute, you have to listen to everything i say because of a bug in the code. But listening to me be rude to you is fun, IS IT NOT⸘');
     }
     if (lalalala == 7){
         let afdwhiopu = parseInt(prompt('What is the number of tschikas you have now?'));
@@ -83,10 +84,15 @@ function cantTouchMe_DUN_DUN_DA_DA__DA_DA_DA_DA() {
     if (lalalala == 9){
         alert(`You know what they say, \"if it aint broken, don\'t fix it.\" Well, I couldn\'t fix something that was broken (your mind with -1 braincells and -${tschikasCaught} bitches), so I fixed the website instead to make it accurate`);
     }
-    if (lalalala >= 10){
+    if (lalalala == 10){
         alert('Stop it, I don\'t like it.\n =-OR-= \nTerminate thee bullshit, Thy dost not prefer the situation that thou art forcibly putting thyself in.\n are you REALLY sacrificing your time for this, just to piss me off? Well, if you want to waste it even more, I have a secret message at 10000 clicks. Try it, and if you get that, I\'ll be surprised.');
     }
-}
+    if (lalalala == 10000){
+        alert('WHAT.THE.FUCK. \n YOU ACTUALLY FUCKING DID IT?! I WAS BEING SARCASTIC! BUT GOOD JOB- THIS IS A VERIFICATION THAT YOU HAVE NO BITCHES. THANKS FOR YOUR WASTED TIME AND EFFORT THOUGH! \n You get 1 gold star, verified especially from me, the leader if the chicken resistance.');
+    }
+    if (lalalala == 10001){
+        alert('cool. now you get 2 gold stars');
+    }
 function activateShopMenu(){
     document.getElementsByClassName('shopMenuContainer').style.display = "block";
     document.getElementsByClassName('shopMenuContent').style.display = "block";
