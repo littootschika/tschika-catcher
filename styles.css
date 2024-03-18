@@ -1,9 +1,6 @@
 body{
     touch-action: none;
 }
-.shopMenuContainer, .shopMenuContent{
-    display: none;
-}
 main{
     border: 5px solid black;
     height: 38em;
@@ -53,4 +50,17 @@ p{
     align-self: center;
     position:sticky;
     font-family: 'Times New Roman', Times, serif;
+}
+.jumpscare{
+    height: 80%;
+    margin: auto;
+}
+/*shop stuff*/
+.shopMenuContainer, .shopMenuContent{
+    display: none;
+}
+.shopMenuContainer:hover, .shopMenuContent:hover{
+    display: block;
+    position: absolute;
+    
 }
