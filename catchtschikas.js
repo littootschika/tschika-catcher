@@ -8,13 +8,14 @@ function stuffThatNeedsToHappenWhenTheBodyLoads(){
 }
 document.addEventListener('touchend', cantTouchMe_DUN_DUN_DA_DA__DA_DA_DA_DA);
 function rngTschikaSpawn() {
-    rngDecider = Math.random()*25000;
-    if (tschikasSpawned < 6){
+    let rngDecider = Math.random()*25000;
         setInterval(newTschika, rngDecider);
+    if (rngDecider < 4000) {
+        rngDecider = 17000;
+        console.log(rngDecider);
     }
-    else {
-        rngDecider = 0;
-    }
+    console.log(rngDecider);
+}
 }
 function newTschika(left, top) {
     tschikasSpawned++;
